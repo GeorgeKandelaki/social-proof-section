@@ -1,0 +1,310 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    letter-spacing: 0.5px;
+    line-height: 1;
+    font-family: "League Spartan", sans-serif;
+    font-size: 1.5rem;
+    position: relative;
+    /* overflow: hidden; */
+}
+
+html {
+    font-size: 62.5%;
+    /* overflow: hidden; */
+}
+
+/**************************/
+/* MAIN CODE */
+/**************************/
+
+.container {
+    max-width: 144rem;
+    margin: 0 auto;
+    padding: 9rem;
+}
+
+/* .main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 9.6rem;
+} */
+
+/**************************/
+/* INTRODUCTION SECTION */
+/**************************/
+
+.introduction {
+    /* display: grid;
+    grid-template-columns: 1fr 2fr; */
+    display: flex;
+    flex-direction: row;
+    gap: 12.8rem;
+    align-items: center;
+    margin-bottom: 9.6rem;
+}
+
+.heading-primary {
+    width: 35rem;
+    font-size: 4.8rem;
+    color: hsl(300, 43%, 22%);
+}
+
+.first {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.second {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.introduction-text {
+    width: 45rem;
+    font-weight: 400;
+    font-size: 1.8rem;
+    margin-top: 3.2rem;
+    color: hsl(303, 10%, 53%);
+}
+
+.reviews {
+    list-style: none;
+}
+
+.list-item {
+    width: 43rem;
+    height: 5.5rem;
+    padding: 2.4rem;
+    background-color: hsl(300, 24%, 96%);
+    border-radius: 1rem;
+    color: hsl(300, 43%, 22%);
+    font-weight: 700;
+
+    display: flex;
+    align-items: center;
+}
+
+.list-item:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+
+.list-item-2 {
+    margin-left: 4.8rem;
+}
+
+.list-item-3 {
+    margin-left: 9.6rem;
+}
+
+.img-box {
+    margin-right: 3.2rem;
+}
+
+.img-box img {
+    height: 1.6rem;
+    width: 1.6rem;
+    margin-right: 5px;
+}
+
+/**************************/
+/* TESTIMONIALS SECTION */
+/**************************/
+
+.testimonials {
+    display: flex;
+    gap: 3.2rem;
+}
+
+.testimonial-box {
+    max-width: 35rem;
+    max-height: 35rem;
+    line-height: 1.2;
+    background-color: hsl(300, 43%, 22%);
+    border-radius: 1rem;
+    padding: 4.8rem 3.2rem 4.8rem 3.2rem;
+}
+
+.testimonial-box-irene {
+    margin-top: 2.4rem;
+    margin-bottom: -2.4rem;
+}
+
+.testimonial-box-anne {
+    margin-top: 4.8rem;
+    margin-bottom: -4.8rem;
+}
+
+.testimonial-owner {
+    display: flex;
+    gap: 2.4rem;
+    margin-bottom: 3.2rem;
+}
+
+.name {
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+}
+
+.verified-status {
+    font-weight: 500;
+    color: hsl(333, 80%, 67%);
+}
+
+.testimonial-text {
+    color: hsl(0, 0%, 100%);
+    font-weight: 500;
+}
+
+.testimonial-owner img {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+}
+
+.testimonial-owner p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.attribution {
+    margin-top: 6.4rem;
+}
+
+/**************************/
+/* QUERIES */
+/**************************/
+
+/**************************/
+/* BELOW 880px */
+/**************************/
+@media (max-width: 55em) {
+    html {
+        font-size: 50%;
+    }
+
+    .container {
+        padding: 3.2rem;
+    }
+
+    .heading-primary {
+        font-size: 4.8rem;
+        text-align: center;
+    }
+
+    .introduction-text {
+        text-align: center;
+        width: 30rem;
+        margin-bottom: 3.2rem;
+    }
+
+    .list-item {
+        padding: 1.2rem;
+    }
+
+    .img-box {
+        margin-right: 1rem;
+    }
+
+    .img-box img {
+        margin: 0;
+    }
+
+    .introduction {
+        gap: 0;
+    }
+}
+
+/**************************/
+/* BELOW 640px */
+/**************************/
+
+@media (max-width: 40em) {
+    body,
+    html {
+        overflow-x: hidden;
+        position: relative;
+    }
+
+    body::after {
+        content: url(images/bg-pattern-top-mobile.svg);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    body::before {
+        content: url(images/bg-pattern-bottom-mobile.svg);
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    .first,
+    .second {
+        display: none;
+    }
+
+    .container {
+        padding: 4.8rem;
+    }
+
+    .introduction {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .introduction-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .list-item {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+        width: 30rem;
+        padding: 3.2rem;
+    }
+
+    .list-item-2 {
+        margin: 0;
+    }
+
+    .list-item-3 {
+        margin: 0;
+    }
+
+    .testimonials {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .testimonial-box {
+        width: 29rem;
+        padding: 2.4rem;
+    }
+
+    .testimonial-box-anne {
+        margin: 0;
+    }
+
+    .testimonial-box-irene {
+        margin: 0;
+    }
+}
